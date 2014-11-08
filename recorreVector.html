@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>
+		<head>Clase arrays</head>
+	</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var precios = new Array();
+
+		do{
+			 var precio = prompt("Ingrese un precio");
+			 if(precio != "")
+			 {
+			 	precios.push(precio);
+			 }
+		} while (precio != "");
+		 var cantidad = precios.length;
+		document.write("<p>Hay " + cantidad +" precios cargasdos. </p>");
+
+		var suma = 0;
+
+		for(var i=0; i<cantidad; i++){
+			/*
+			suponiendo se ingresan los valores: 15, 30, 40
+			ejemplo: suma = 0 + 15 -> primer recorrido del for
+					suma = 15 + 30 -> segundop recorrido del for
+					suma = 30 + 40 -> tercer recorrido del for
+			*/
+			suma = suma + precios[i];
+		}
+
+		if(cantidad > 0){
+			var promedio = suma/cantidad;
+		} else {
+			var promedio = 0;
+		}
+
+	</script>
+
+	<p>Suma: </p> 
+	<script type="text/javascript">
+		document.write(suma);
+	</script>
+
+	<p>Promedio: </p> 
+	<script type="text/javascript">
+		document.write(promedio);
+	</script>
+</body>
+</html>
